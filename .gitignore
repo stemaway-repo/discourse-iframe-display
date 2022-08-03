@@ -1,0 +1,8 @@
+.discourse-site
+node_modules
+HELP
+.DS_Store
+.template-lintrc.js
+package.json
+yarn.lock
+.eslintrc

@@ -1,0 +1,22 @@
+enable_theme_component:
+  type: bool
+  default: false
+  description: "Enable or disable iframe theme-component"
+topic_banners:
+  type: list
+  default: "/, 7"
+  description: |
+    Each line should be in the format of "<code>relative url</code>, <code>topic-id</code>".<br/>
+    <ul>
+    <li>If you're unsure about the relative url of a view, below is an option to show the url on the browser console</li>
+    <li>The topic-id is the first number in its url, for example /t/welcome-to-discourse/<b>8</b>/3</li>
+    </ul>
+    <p>For performance reasons it's recommended that you close banner topics so there aren't any replies</p>
+banner_bg_color:
+  type: string
+  default: "var(--highlight-low-or-medium)"
+  description: "A valid CSS color declaration. You can also use Discourse's default color variables."
+show_url:
+  type: bool
+  default: false
+  description: "Show the current url on the browser console"
