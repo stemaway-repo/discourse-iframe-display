@@ -1,6 +1,6 @@
 import { ajax } from "discourse/lib/ajax";
 import { createWidget } from "discourse/widgets/widget";
-import { getOwner } from "discourse-common/lib/get-owner";
+import { getOwner } from "@ember/application";
 import { h } from "virtual-dom";
 import PostCooked from "discourse/widgets/post-cooked";
 
@@ -31,7 +31,8 @@ const setups = parseSetups(settings.topic_banners);
 createWidget("topic-banners", {
   tagName: "div.topic-banner-container",
   html() {
-    const router = getOwner(this).lookup("router:main");
+    const owner = getOwner(this);
+    const router = owner.lookup('service:router');
     const url = router.currentURL;
 
     if (settings.show_url) {
